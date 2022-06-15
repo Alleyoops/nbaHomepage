@@ -204,8 +204,7 @@ body {
 	font-family: "arial", verdana Helvetica, sans-serif;
 }
 .h-bg {
-	background: rgb(30,110,220);
-	
+	background: rgb(30, 110, 220)
 }
 
 .header {
@@ -219,15 +218,14 @@ body {
 
 .main-wrp {
 	background: #fff;
-	box-shadow: 0px 0px 10px #555;
+	box-shadow: 0px 0px 10px rgb(85, 85, 85);
 }
 
 /*logo*/
 .logo {
 	float: left;
-width: 80px;
-height: ;
-
+	width: 80px;
+	height: 80px;
 }
 
 .foot-search {
@@ -246,7 +244,7 @@ height: ;
 	padding: 7px;
 	position: absolute;
 	background: white;
-	color: rgb(82, 101, 126);
+	color: rgb(80, 100, 125);
 	right: 57px;
 	top: 31px;
 }
@@ -383,7 +381,7 @@ height: ;
 }
 
 .nav-collapse_ .nav .color-6 {
-	background: #3a7aea;
+	background: #3a7a9a;
 }
 
 #search {
@@ -405,7 +403,7 @@ height: ;
 	height: 32px;
 	border: none;
 	background: #ffffff;
-	color: #a0a0a0;
+	color: #144092;
 	font-size: 13px;
 	font-family: Arial, Helvetica, Arial, sans-serif;
 	line-height: 22px;
@@ -603,7 +601,8 @@ input[type="color"],
 
 /*---footer----*/
 .footer {
-	background: rgb(87, 81, 80);
+	/* background: rgb(87, 81, 80); */
+	background: rgb(66, 144, 173);
 }
 
 .footer-grid {
@@ -686,7 +685,9 @@ input[type="color"],
 
 /*Artists*/
 .artists {
-	padding: 30px;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 30px;
 }
 /*---products---*/
 .products h3 {
@@ -715,7 +716,7 @@ input[type="color"],
 }
 
 .product-grid h4:hover {
-	color: #00df37;
+	color: #0368cf;
 	cursor: pointer;
 }
 
@@ -727,8 +728,8 @@ input[type="color"],
 .product-grids h6 {
 	font-weight: bold;
 	text-transform: uppercase;
-	font-size: 22px;
-	color: #7ca222;
+	font-size: 30px;
+	color: #0368cf;
 	text-align: left;
 }
 
@@ -753,7 +754,7 @@ input[type="color"],
 .contact-form h4 {
 	font-family: Charcoal;
 	font-size: 30px;
-	color: #7ca222;
+	color: #0368cf;
 	margin-bottom: 10px;
 	text-transform: uppercase;
 	cursor: pointer;
@@ -765,18 +766,19 @@ input[type="color"],
 }
 
 .services-sidebar li a {
-	color: #6275ff;
+	color: #5ea093;
 	font-family: 微软雅黑;
 	font-size: 16px;
-	-webkit-transition: all .9s;
-	-moz-transition: all .9s;
-	-o-transition: all .9s;
-	-ms-transition: all .9s;
-	transition: all .9s;
+	-webkit-transition: all .6s;
+	-moz-transition: all .6s;
+	-o-transition: all .6s;
+	-ms-transition: all .6s;
+	transition: all .6s;
 }
 
 .services-sidebar li a:hover {
-	color: #7ca222;
+	color: #0368cf;
+	font-size: 18px;
 }
 
 .grid:nth-child(2),
@@ -786,13 +788,13 @@ input[type="color"],
 
 .grid h4 {
 	text-transform: none;
-
+	color: #000;
 }
 
 .grid h5 {
-	font-size: 20px;
-	color: #555;
-	margin: 10px 05;
+	font-size: 16px;
+	color: rgb(175, 175, 174);
+	margin: 10px 05
 }
 
 .grid h5 a {
@@ -804,17 +806,17 @@ input[type="color"],
 }
 
 .grid p {
+	text-indent:2em;
 	line-height: 1.8em;
-	color: #747474;
+	color: #212121;
 	font-size: 12px;
 	margin-bottom: 10px;
 }
 
 .grid img {
 	max-width: 100%;
+	margin-bottom: 20px;
 	cursor: pointer;
-	box-shadow: 0px 0px 10px #aaa;
-	border: 8px solid #fff;
 }
 
 .grid img:hover {
@@ -915,7 +917,7 @@ form span label {
 	border-radius: 4px;
 	-webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 	-moz-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-	box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+	box-shadow: 2px 2px 2px rgba(248, 245, 245, 0.5);
 	font-size: 12px;
 	line-height: 15px;
 	color: #fff;
@@ -942,12 +944,9 @@ form span label {
 	border-radius: 3px;
 	font-family: Arial, Helvetica, sans-serif;
 	-webkit-appearance: none;
+	margin-bottom: 10px;
 }
 
-form textarea {
-	height: 125px;
-	resize: none;
-}
 
 .drp-dwn {
 	display: none;
