@@ -1,0 +1,203 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>我的NBA会员</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="./css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="shortcut icon" href="https://res.nba.cn/resource/mat1/chinanba/images/favicon.ico">
+    <link rel="stylesheet" href="./css/responsive.css" type="text/css" media="screen">
+</head>
+
+<body>
+    <div class="h-bg">
+        <div class="container">
+            <div class="header">
+                <div class="logo">
+                    <a href="index.html"><img src="./images/logo.png" title="logo" alt=""> </a>
+                </div>
+                <div class="foot-search">
+                    <form>
+                        <input type="text" value="  输入关键词" onfocus="this.value = '';"
+                        onblur="if (this.value == '') {this.value = '  Keyword here';}">
+                 <input type="submit" value="Search">
+                    </form>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <nav class="nav-collapse nav-collapse_ collapse">
+                <ul class="nav sf-menu clearfix sf-js-enabled">
+                    <li class="active color-1"><a href="index.html">球队 team</a></li>
+                    <li class="sub-menu color-2"><a href="star.html">球星 star</a></li>
+                    <li class="color-3"><a href="news.html">新闻 news</a></li>
+                    <li class="color-4"><a href="video.html">视频 video</a></li>
+                    <li class="color-5"><a href="story.html">故事 story</a></li>
+                    <li class="color-6"><a href="me.html">我的 mine</a></li>
+                </ul>
+            </nav>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div class="main-bg">
+        <div class="container">
+            <div class="main-wrp">
+                <div class="artists">
+                    <div class="map">
+                        <canvas width="420px" height="340px" draggable="true" ondragover="allowDrop(event)"
+                            ondrop="fileDrop(event)" id="cvs"></canvas>
+                        <script>
+                            var c = document.getElementById("cvs");
+                            var ctx = c.getContext("2d");
+                            ctx.translate(210, 170);
+                            ctx.beginPath();
+                            ctx.arc(0, 0, 120, 0, Math.PI * 2, true);
+                            ctx.strokeStyle = "gray";
+                            ctx.lineWidth = 10;
+                            ctx.stroke();
+
+                            ctx.beginPath();
+                            ctx.moveTo(0, -60);
+                            ctx.lineTo(0, 60);
+                            ctx.closePath();
+                            ctx.strokeStyle = "gray";
+                            ctx.lineWidth = 10;
+                            ctx.lineJoin = "round";
+                            ctx.stroke();
+
+                            ctx.beginPath();
+                            ctx.moveTo(-60, 0);
+                            ctx.lineTo(60, 0);
+                            ctx.closePath();
+                            ctx.strokeStyle = "gray";
+                            ctx.lineWidth = 10;
+                            ctx.lineJoin = "round";
+                            ctx.stroke();
+
+                            //ondragover事件回调函数
+                            function allowDrop(ev) {
+                                //解禁当前元素为可放置被拖拽元素的区域
+                                ev.preventDefault();
+                            }
+                            //ondrop事件回调函数
+                            function fileDrop(e) {
+                                //解禁当前元素为可放置被拖拽元素的区域
+                                e.preventDefault();
+                                var img = new Image();
+                                //获取从本地拖拽放置的文件对象数组files
+                                var files = e.dataTransfer.files;
+                                //获取当前图片文件的URL来源
+                                var imgURL = window.webkitURL.createObjectURL(files[0]);
+                                //设置图片对象img的src属性为当前图片文件URL地址
+                                img.src = imgURL;
+                                img.setAttribute("width", "100%");
+                                img.setAttribute("height", "100%");
+                                //当图片加载完毕后执行函数在画布上绘制拼图
+                                img.onload = function () {
+                                    var c = document.getElementById("cvs");
+                                    var ctx = c.getContext("2d");
+                                    var i = 0;
+                                    var hand =  setInterval(function () {
+                                        ctx.translate(-210, -170);
+                                        ctx.clearRect(0, 0, 420, 340);
+                                        ctx.translate(210, 170);
+
+                                        ctx.font = "bold 20px serif";
+                                        ctx.fillText("上传中···",-60,10);
+
+                                        ctx.beginPath();
+                                        ctx.arc(0, 0, 140, 0, (Math.PI / 18) * (i + 1), false);
+                                        ctx.strokeStyle = "#0368cf";
+                                        ctx.lineWidth = 15;
+                                        ctx.lineJoin = "round";
+                                        ctx.stroke();
+                                        i+=1;
+                                        if(i==37){
+                                            
+                                            ctx.translate(-210, -170);
+                                            ctx.clearRect(0, 0, 420, 340);
+                                            //绘制完整图片（补齐空白方块）
+                                            ctx.drawImage(img, 0, 0);
+                                            ctx.translate(210, 170);
+                                            clearInterval(hand);
+                                                }
+                                    }, 40)
+
+                                    }
+
+                                }
+                        </script>
+                        <a class="myButton" href="#"
+                            style="font-family: 微软雅黑;margin-top: 10px;">温馨提示：请从文件夹拖拽分辨率为420x320的图片上传头像</a></small>
+                    </div>
+                    <div class="contact-form">
+                        <h4>注册NBA会员</h4>
+                        <form action="#" onsubmit="alert('恭喜你注册成功，成为NBA会员！')">
+                            <div>
+                                <span><label>用户名：</label></span>
+                                <span><input required type="text" value=""></span>
+                            </div>
+                            <div>
+                                <span><label>邮箱：</label></span>
+                                <span><input required type="text" value=""></span>
+                            </div>
+                            <div>
+                                <span><label>密码：</label></span>
+                                <span><input required type="text" value=""></span>
+                            </div>
+                            <div>
+                                <span><label>个人简介：</label></span>
+                                <span><input required type="text" value=""></span>
+                            </div>
+                            <div>
+                                <span><input style="float: right; margin-bottom: 20px;" type="submit" value="提交"></span>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <h3>移动互联网大作业 - NBA官网设计</h3>
+                <p>该网页包含六个导航栏菜单，分别对应六个HTML网页文件，
+                    使用多媒体API播放视频和音乐，
+                    拖放API上传头像，
+                    画布API绘制拖拽头像前的添加图案、模仿上传图片时的圆形进度条以及绘制图片，
+                    <br>
+                    并且支持在手机和电脑上自适应大小。
+                    <br>
+                    静态网页已部署到Github，欢迎访问！
+                </p>
+                <form action="#" accept-charset="utf-8" class="nav-form">
+                    <input type="text" placeholder="https://alleyoops.github.io/nbaHomepage/index.html" >
+                    <a href="https://alleyoops.github.io/nbaHomepage/index.html" target="_blank" type="submit" class="btn-small">访问</a>
+                </form>
+                <div class="clear"></div>
+            </div>
+            <div class="footer-nav1">
+                <ul>
+                    <li id="twtr"><a href=""><img src="./images/twitter.png" alt="" title="Twitter"></a></li>
+                    <li id="fb"><a href=""><img src="./images/fb.png" alt="" title="facebook"></a></li>
+                    <li id="mail"><a href=""><img src="./images/mail.png" alt="" title="Mail"></a></li>
+                    <li id="feed"><a href=""><img src="./images/feed.png" alt="" title="Feed"></a></li>
+                    <li id="plus"><a href=""><img src="./images/plus.png" alt="" title="Plus"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="footer1">
+        <div class="container">
+            <p class="w3-link"><span>© All rights Reserved | Designed by&nbsp; <a href="#">@黄平_2019210235_01041902</a></span></p>
+        </div>
+    </div>
+</body>
+
+</html>

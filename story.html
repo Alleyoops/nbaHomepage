@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>NBA故事</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="./css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="shortcut icon" href="https://res.nba.cn/resource/mat1/chinanba/images/favicon.ico">
+    <link rel="stylesheet" href="./css/responsive.css" type="text/css" media="screen">
+    <link rel="stylesheet" type="text/css" href="player.css" />
+    <script type="text/javascript" src="player.js"></script>
+
+</head>
+
+<body>
+    <div class="h-bg">
+        <div class="container">
+            <div class="header">
+                <div class="logo">
+                    <a href="index.html"><img src="./images/logo.png" title="logo" alt=""> </a>
+                </div>
+                <div class="foot-search">
+                    <form>
+                        <input type="text" value="  输入关键词" onfocus="this.value = '';"
+                            onblur="if (this.value == '') {this.value = '  Keyword here';}">
+                        <input type="submit" value="Search">
+                    </form>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <nav class="nav-collapse nav-collapse_ collapse">
+                <ul class="nav sf-menu clearfix sf-js-enabled">
+                    <li class="active color-1"><a href="index.html">球队 team</a></li>
+                    <li class="sub-menu color-2"><a href="star.html">球星 star</a></li>
+                    <li class="color-3"><a href="news.html">新闻 news</a></li>
+                    <li class="color-4"><a href="video.html">视频 video</a></li>
+                    <li class="color-5"><a href="story.html">故事 story</a></li>
+                    <li class="color-6"><a href="me.html">我的 mine</a></li>
+                </ul>
+            </nav>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div class="main-bg">
+        <div class="container">
+
+            <div class="main-wrp">
+                <img width="100%" src="./images/history.jpg">
+                <div class="artists">
+                    <div class="product-grids">
+                        <div class="bloder-content">
+                            <h6>NBA历史</h6>
+                            <div class="product-grid">
+                                <img src="./images/history/1.jpg" alt="" />
+                                <a href="https://china.nba.cn/topics/50players.htm" target="_blank">
+                                    <h4>NBA50大巨星</h4>
+                                </a>
+                            </div>
+                            <div class="product-grid">
+                                <img src="./images/history/2.jpg" alt="" />
+                                <a href="https://china.nba.cn/article/index.htm?articleId=20150802011372">
+                                    <h4>NBA选秀掌故</h4>
+                                </a>
+                            </div>
+                            <div class="product-grid">
+                                <img src="./images/history/4.jpg" alt="" />
+                                <a href="https://china.nba.cn/article/index.htm?articleId=20151004023886">
+                                    <h4>历届冠军及FMVP</h4>
+                                </a>
+                            </div>
+                            <div class="product-grid">
+                                <img src="./images/history/5.jpg" alt="" />
+                                <a href="https://china.nba.cn/article/index.htm?articleId=20151004023756">
+                                    <h4>历届常规赛MVP</h4>
+                                </a>
+                            </div>
+                            <div class="product-grid">
+                                <img src="./images/history/6.jpg" alt="" />
+                                <a href="https://china.nba.cn/article/index.htm?articleId=20151004025017">
+                                    <h4>历届最佳主教练</h4>
+                                </a>
+                            </div>
+                            <div class="product-grid">
+                                <img src="./images/history/3.jpg" alt="" />
+                                <a href="https://china.nba.cn/topics/faq/index.htm">
+                                    <h4>NBA知识Q&A</h4>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="pagination">
+                            <ul>
+                                <li><a href="#">«</a></li>
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">»</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="services-sidebar">
+
+                        <h4>电台</h4>
+                        <div onload="renew()" onmousemove="move(event)" onmouseup="mouseUp()">
+                            <audio id="audio" src="./music/Bobby Kalman - Remember The Good Times.mp3"
+                                preload="auto"></audio>
+                            <div id="main">
+                                <div class="top">
+                                </div>
+                                <div class="control">
+                                    <div class="album">
+                                        <img id="album" src="./images/player/cover1.jpg" />
+                                    </div>
+                                    <div class="main_control">
+                                        <div id="music_name" class="title">Remember The Good Times</div>
+                                        <div id="play_bar">
+                                            <div class="control_music">
+                                                <span id="prev" class="button change" onclick="prevMusic()"
+                                                    title="上一首"></span>
+                                                <span id="play" class="button play" onclick="play()" title="播放"
+                                                    style="display: block;"></span>
+                                                <span id="pause" class="button play" onclick="pause()" title="暂停"
+                                                    style="display: none"></span>
+                                                <span id="next" class="button change" onclick="nextMusic()"
+                                                    title="下一首"></span>
+                                            </div>
+                                        </div>
+                                        <div class="list">
+                                            <ul>
+                                                <li><img src="./images/fm.png" id="fm"><a id="fm_name" href="#">NBA
+                                                        Today</a></li>
+                                                <li><img src="./images/fm.png" id="fm"><a id="fm_name" href="#">The
+                                                        Athletic NBA Show</a></li>
+                                                <li><img src="./images/fm.png" id="fm"><a id="fm_name" href="#">Locked
+                                                        on NBA</a></li>
+                                                <li><img src="./images/fm.png" id="fm"><a id="fm_name" href="#">The NBA
+                                                        Podcast</a></li>
+                                                <li><img src="./images/fm.png" id="fm"><a id="fm_name" href="#">Fantasy
+                                                        NBA Today</a></li>
+                                                <li><img src="./images/fm.png" id="fm"><a id="fm_name" href="#">Los NBA
+                                                        Freaks</a></li>
+                                                <li><img src="./images/fm.png" id="fm"><a id="fm_name"
+                                                        href="#">······</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+</body>
+
+</html>

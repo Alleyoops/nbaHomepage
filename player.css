@@ -1,0 +1,160 @@
+.top, .control, .main_bottom, #list_window, #list_top, #play_list_body {
+    width: 100%;
+    background-color: #253F60;
+}
+
+.top {
+    height: 25px;
+    margin-top: 20px;
+}
+
+.title {
+    color: azure;
+}
+
+#title {
+    position: relative;
+    float: left;
+    left: 3px;
+    top: 1px;
+}
+
+.control {
+    height: 55%;
+}
+
+div.album {
+    height: 140px;
+    width: 140px;
+    margin-left:auto;
+    margin-right:auto;   
+}
+
+img#album {
+    height: 100%;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.main_control {
+    margin-top: 14px;
+    margin-bottom: 14px;
+
+}
+
+.main_bottom {
+    height: 30px;
+    padding-top: 5px;
+    z-index: 0;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+#music_name {
+    margin: 20px;
+    margin-top: 30px;
+    text-align: center;
+    color: azure;
+    position: relative;
+}
+#music_name:hover{
+    color: aqua;
+}
+
+#play_bar{
+    display: flex;
+}
+
+#fm{
+    width: 6%;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+#fm_name{
+    font-size: 14px;
+    color: white;
+}
+#fm_name:hover{
+    color: aqua;
+	font-size: 16px;
+	-webkit-transition: all .6s;
+	-moz-transition: all .6s;
+	-o-transition: all .6s;
+	-ms-transition: all .6s;
+	transition: all .6s;
+}
+
+.control_music {
+    left: 25px;
+    top: 65px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.long_progress_bar {
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    height: 4px;
+}
+
+.button {
+    position: relative;
+    float: left;
+    margin-top: -6px;
+}
+
+.button.change {
+    top: 5px;
+    width: 48px;
+    height: 48px;
+}
+
+.button.change:hover {
+    background-position: -45px 0px;
+    cursor: pointer;
+}
+
+.button.change:active {
+    background-position: -45px 0px;
+    cursor: pointer;
+    margin-top: -5px;
+}
+
+.button.play {
+    width: 56px;
+    height: 56px;
+}
+
+.button.play:hover {
+    background-position: -56px 0px;
+    cursor: pointer;
+}
+
+.button.play:active {
+    background-position: -56px 0px;
+    cursor: pointer;
+    margin-top: -5px;
+}
+
+.button#prev {
+    background-image: url("./images/player/prev.png");
+}
+
+.button#play {
+    background-image: url("./images/player/play.png");
+}
+
+.button#pause {
+    background-image: url("./images/player/pause.png");
+}
+
+.button#next {
+    background-image: url("./images/player/next.png");
+}
+
+.button#random {
+    background-image: url("./images/player/mode_05.png");
+}
